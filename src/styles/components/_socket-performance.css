@@ -1,0 +1,60 @@
+/* Performance Metrics Compact Style */
+.performance-page {
+  padding: 15px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.averages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.metric .label {
+  font-weight: 500;
+  color: #555;
+  font-size: 13px;
+}
+
+.metric .value {
+  font-weight: 600;
+  color: #333;
+}
+
+.charts {
+  display: grid;
+  gap: 20px;
+}
+
+.chart {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.chart h4 {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #444;
+}

@@ -1,0 +1,8 @@
+/* Import tất cả các file CSS */
+@import './base/_base.css';
+@import './layouts/_app-layout.css';
+@import './components/_dashboard.css';
+@import './components/_device-list.css';
+@import './components/_device-detail.css';
+@import './pages/_home.css';
+@import './pages/_devices.css';

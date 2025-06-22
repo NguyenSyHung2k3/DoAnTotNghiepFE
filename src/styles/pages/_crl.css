@@ -1,0 +1,161 @@
+.crl-page {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f8fafc;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.crl-header {
+  padding: 16px 24px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.crl-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  color: #2d3748;
+}
+
+.crl-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  color: #4a5568;
+  flex-wrap: wrap;
+}
+
+.crl-meta div {
+  background: #edf2f7;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.crl-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+}
+
+.revoked-certs {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.revoked-certs h3 {
+  margin-top: 0;
+  color: #2d3748;
+}
+
+.crl-pem {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.crl-pem h3 {
+  margin-top: 0;
+  color: #2d3748;
+}
+
+.crl-pem pre {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background: #f7fafc;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.serial {
+  font-family: monospace;
+  word-break: break-all;
+}
+
+.reason-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.reason-badge.keyCompromise {
+  background: #fff5f5;
+  color: #e53e3e;
+}
+
+.reason-badge.cACompromise {
+  background: #fff5f5;
+  color: #dd6b20;
+}
+
+.reason-badge.affiliationChanged {
+  background: #ebf8ff;
+  color: #3182ce;
+}
+
+.copy-btn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #3182ce;
+}
+
+.no-revoked {
+  color: #718096;
+  font-style: italic;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.loading, .error {
+  padding: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.error {
+  color: #e53e3e;
+}
+
+@media (max-width: 1200px) {
+  .crl-container {
+    flex-direction: column;
+  }
+}

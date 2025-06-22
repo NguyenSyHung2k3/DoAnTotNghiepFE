@@ -1,0 +1,280 @@
+.certificate-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: 'Inter', sans-serif;
+}
+
+.certificate-header {
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.certificate-header h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 24px;
+}
+
+.certificate-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+}
+
+.device-id-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.device-id-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.search-button {
+  padding: 10px 20px;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.search-button:hover:not(:disabled) {
+  background: #3182ce;
+}
+
+.search-button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.status-message {
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.status-message.loading {
+  background: #ebf8ff;
+  color: #3182ce;
+}
+
+.status-message.error {
+  background: #fff5f5;
+  color: #e53e3e;
+}
+
+.status-message.info {
+  background: #f0fff4;
+  color: #38a169;
+}
+
+.certificate-details {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.detail-section {
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2d3748;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  font-weight: 600;
+  min-width: 120px;
+  color: #4a5568;
+}
+
+.detail-value {
+  color: #2d3748;
+  word-break: break-word;
+}
+
+.status-active {
+  color: #38a169;
+}
+
+.status-revoked {
+  color: #e53e3e;
+}
+
+.fingerprint {
+  font-family: monospace;
+  font-size: 13px;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+.action-section {
+  padding: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.action-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.action-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.renew-button {
+  background-color: #38a169;
+  color: white;
+}
+
+.renew-button:hover:not(:disabled) {
+  background-color: #2f855a;
+}
+
+.revoke-button {
+  background-color: #e53e3e;
+  color: white;
+}
+
+.revoke-button:hover:not(:disabled) {
+  background-color: #c53030;
+}
+
+.action-status {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.action-status.success {
+  background-color: #f0fff4;
+  color: #22543d;
+  border: 1px solid #c6f6d5;
+}
+
+.action-status.error {
+  background-color: #fff5f5;
+  color: #9b2c2c;
+  border: 1px solid #fed7d7;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.secret-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hidden-secret {
+  font-family: monospace;
+  letter-spacing: 2px;
+}
+
+.toggle-secret-button {
+  background: none;
+  border: none;
+  color: #4299e1;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.toggle-secret-button:hover {
+  text-decoration: underline;
+}
+
+.detail-row.full-width {
+  grid-column: 1 / -1;
+}
+
+.certificate-value {
+  font-family: monospace;
+  background: #f8f9fa;
+  padding: 8px;
+  border-radius: 4px;
+  word-break: break-all;
+  display: block;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Màu sắc cho các trạng thái */
+.status-active {
+  color: #38a169;
+}
+
+.status-revoked {
+  color: #e53e3e;
+}
+
+.status-expired {
+  color: #dd6b20;
+}
+
+.status-pending {
+  color: #d69e2e;
+}
