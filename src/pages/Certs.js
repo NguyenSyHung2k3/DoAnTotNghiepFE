@@ -196,7 +196,7 @@ const CertificatePage = () => {
               <div className="action-buttons">
                 <button
                   onClick={handleRenew}
-                  disabled={loading || certificate.status === 'revoked'}
+                  disabled={loading}
                   className="action-button renew-button"
                 >
                   Renew Certificate
